@@ -25,7 +25,7 @@ def index():
         Age = request.form.get("Age")
         Loan = request.form.get("Loan")
         print(Income,Age,Loan) 
-        model=joblib.load("Creditcard")
+        model=joblib.load("Creditcards")
         pred=model.predict([[float(Income),float(Age),float(Loan)]])
         print(pred)
         s="The predicted default score is:"+str(pred)
